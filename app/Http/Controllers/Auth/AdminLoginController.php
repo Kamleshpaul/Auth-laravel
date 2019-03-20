@@ -14,10 +14,6 @@ class AdminLoginController extends Controller
     }
 
 
-    public function index(){
-    	return view('admin.dashboard');
-    }
-
     public function showLoginForm()
     {
       return view('admin.auth.login');
@@ -44,6 +40,6 @@ class AdminLoginController extends Controller
     public function logout()
     {
         Auth::guard('admin')->logout();
-        return redirect('/');
+        return redirect('/admin');
     }
 }
